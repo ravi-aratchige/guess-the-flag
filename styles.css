@@ -1,0 +1,69 @@
+/* color palette - https://colorhunt.co/palette/222831393e4600adb5eeeeee */
+/* use if proper only */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header ul {
+    display: flex;
+    list-style: none;
+    padding: 1.2rem;
+}
+.header ul li {
+    padding: 0 1.2rem;
+}
+.header ul li a {
+    text-decoration: none;
+    color: white;
+}
+.header img {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+.websiteName {
+    text-align: center;
+}
+.description {
+    margin: 0.8rem;
+}
+.start {
+    text-align: center;
+}
+.start button {
+    font-size: 1rem;
+    padding: 0.8rem;
+    background-color: #633e23;
+    color: white;
+    border-radius: 10px;
+}
+.start button a {
+    text-decoration: none;
+    color: white;
+}
+.background img {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+/* HOVER STATES */
+
+.start button:active {
+    background-color: #efe2d1;
+    color: #000;
+}
+.start button a:active {
+    background-color: #efe2d1;
+    color: #000;
+}
