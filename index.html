@@ -15,14 +15,36 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
-    <div class="websiteName">
-        <h1>GUESS THE FLAG</h1>
+    <div class="heading">
+        <h1 id="headingText">GUESS THE FLAG</h1>
+    </div>
+    <div class="flag">
+        <!-- <img src="https://flagcdn.com/at.svg" alt="Flags"> -->
+    </div>
+    <div class="countryDescription">
+        <p>This is <span>Country Name</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat saepe earum voluptatibus possimus error consequuntur nihil quia harum. Perspiciatis nesciunt odit, quos sapiente voluptatibus ullam quae expedita nulla velit?</p>
     </div>
     <div class="description">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat reprehenderit repellat totam illo quia cupiditate necessitatibus! Ea omnis beatae cupiditate maxime cum vitae commodi voluptate. Exercitationem iure delectus excepturi?</p>
+        <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat reprehenderit repellat totam illo quia cupiditate necessitatibus! Ea omnis beatae cupiditate maxime cum vitae commodi voluptate. Exercitationem iure delectus excepturi?</p>
     </div>
     <div class="start">
-        <button>Start! &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+        <button onclick="question()">Start! &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="options">
+        <div class="answers">
+            <button id="option1" onclick="correct()">Answer 1</button>
+            <button id="option2" onclick="incorrect()">Answer 2</button>
+            <button id="option3">Answer 3</button>
+            <button id="option4">Answer 4</button>
+        </div>
+        <div class="otherOptions">
+            <button id="showAnswer">Show Answer</button>
+            <button id="skip">Skip Flag</button>
+        </div>
+    </div>
+    <div class="next">
+        <button id="nextFlag" onclick="next()">Next Flag</button>
     </div>
     <div class="background">
         <img src="img/globe-small.png" alt="Flags">

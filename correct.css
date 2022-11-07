@@ -44,43 +44,31 @@ body {
 .flag img {
     max-width: 80%;
 }
-.answers {
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.countryDescription {
+    text-align: left;
+    margin: 0.8rem;
 }
-.answers button {
-    width: 80%;
-    font-size: 1rem;
-    padding: 0.5rem;
-    margin: 0.3rem;
-    background-color: #393E46;
-    color: white;
-    border-radius: 0;
+.countryDescription p span {
+    font-weight: bold;
 }
-.otherOptions {
+.next {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.otherOptions button {
+.next button {
     width: 38%;
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     padding: 0.5rem;
     margin: 0.4rem;
-    background-color: #EEEEEE;
-    color: black;
+    background-color: #393E46;
+    color: white;
     border-radius: 0;
 }
 
 /* HOVER STATES */
 
-.answers button:active {
+.next button:active {
     background-color: #EEEEEE;
     color: black;
-}
-.otherOptions button:active {
-    background-color: #393E46;
-    color: white;
 }
