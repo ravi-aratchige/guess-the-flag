@@ -25,7 +25,31 @@ currentNum = getNewNum();
 currentCountryName = getNewCountryName();
 // for testing:
 console.log(currentNum);
+console.log(currentCountryName);
 console.log(getNewCountryCode());
+
+// checking whether answer is correct or not
+
+// let correctAnswerNumber = Math.floor(Math.random() * 4);
+
+function generateRandomIntegerInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let correctAnswerNumber = generateRandomIntegerInRange(1, 4);
+console.log(correctAnswerNumber);
+
+// change text of correct option
+
+function changeCorrectOptionText(correctAnswerNumber) {
+    // let correctOption = document.getElementById(correctAnswerNumber);
+    // correctOption.innerHTML = currentCountryName;
+    document.getElementById(correctAnswerNumber).innerHTML = currentCountryName;
+}
+
+changeCorrectOptionText(correctAnswerNumber);
+
+// TODO - add if statement to check whether answer is correct or not
 
 // program starts, question is asked
 
