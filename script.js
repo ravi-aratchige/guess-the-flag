@@ -10,13 +10,13 @@ function getNewNum() {
     let newNum =  Math.floor(Math.random() * 10);
     return newNum;
 }
-function getNewCountryCode() {
-    let newCountryCode = countryCodes[currentNum];
-    return newCountryCode;
+function getCountryCode() {
+    let countryCode = countryCodes[currentNum];
+    return countryCode;
 }
-function getNewCountryName() {
-    let newCountryName = countryNames[currentNum];
-    return newCountryName;
+function getCountryName() {
+    let countryName = countryNames[currentNum];
+    return countryName;
 }
 function generateRandomIntegerInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -25,7 +25,7 @@ function generateRandomIntegerInRange(min, max) {
 // initializations
 
 let currentNum = getNewNum();
-let currentCountryName = getNewCountryName();
+let currentCountryName = getCountryName();
 let correctAnswerNumber;
 
 // for testing:
@@ -33,12 +33,12 @@ let correctAnswerNumber;
 console.log(currentNum);
 console.log(typeof(currentNum));
 console.log(currentCountryName);
-console.log(getNewCountryCode());
+console.log(getCountryCode());
 
 // change text of correct option
 
 function changeCorrectOptionText(correctAnswerNumber) {
-    document.getElementById(String(correctAnswerNumber)).innerHTML = getNewCountryName();
+    document.getElementById(String(correctAnswerNumber)).innerHTML = getCountryName();
 }
 
 // checking whether answer is correct or not
@@ -69,7 +69,7 @@ function question() {
     // display flag
     document.querySelector('.flag').style.display = 'flex';
     let URLcomp1 = 'https://flagcdn.com/';
-    let flagURL = URLcomp1.concat(getNewCountryCode(),'.svg');
+    let flagURL = URLcomp1.concat(getCountryCode(),'.svg');
     console.log(flagURL);
     // document.querySelector('.flag').style.backgroundImage = 'url("https://flagcdn.com/ru.svg")';
     document.querySelector('.flag').style.cssText+= `background-image: url(${flagURL})`;
@@ -134,7 +134,7 @@ function next() {
 
     // reset variables
     currentNum = getNewNum();
-    currentCountryName = getNewCountryName();
+    currentCountryName = getCountryName();
 
     // remove country description
     document.querySelector('.countryDescription').style.display = 'none';
