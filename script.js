@@ -19,8 +19,10 @@ function getNewCountryName() {
     return newCountryName;
 }
 
+// initializations
 let currentNum = 0
 currentNum = getNewNum();
+currentCountryName = getNewCountryName();
 // for testing:
 console.log(currentNum);
 console.log(getNewCountryCode());
@@ -68,6 +70,7 @@ function correct() {
 
     // display country name and description
     document.querySelector('.countryDescription').style.display = 'block';
+    document.getElementById('countryName').innerHTML = currentCountryName;
 
     // remove options
     document.querySelector('.options').style.display = 'none';
@@ -87,6 +90,7 @@ function incorrect() {
 
     // display country name and description
     document.querySelector('.countryDescription').style.display = 'block';
+    document.getElementById('countryName').innerHTML = currentCountryName;
 
     // remove options
     document.querySelector('.options').style.display = 'none';
@@ -98,6 +102,10 @@ function incorrect() {
 // "Next Flag" button is clicked
 
 function next() {
+
+    // reset variables
+    currentNum = getNewNum();
+    currentCountryName = getNewCountryName();
 
     // remove country description
     document.querySelector('.countryDescription').style.display = 'none';
