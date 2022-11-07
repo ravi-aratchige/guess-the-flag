@@ -9,6 +9,7 @@ body {
     color: white;
     margin: 0;
     text-align: center;
+    width: 100%;
 }
 button {
     border: 0;
@@ -47,7 +48,7 @@ button {
     /* text-align: center; */
     /* text-align is not really necessary */
     height: 192px;
-    width: 100%;
+    width: 100vw;
     /* background-color: aqua; */
     display: none;
 }
