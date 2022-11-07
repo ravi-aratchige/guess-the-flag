@@ -4,56 +4,61 @@ const num = [0,1,2,3,4,5,6,7,8,9];
 const countryCodes = ['lk', 'us', 'ro', 'fr', 'es', 'in', 'ml', 'sg', 'za', 'jp'];
 const countryNames = ['Sri Lanka', 'United States', 'Romania', 'France', 'Spain', 'India', 'Mali', 'Singapore', 'South Africa', 'Japan'];
 
+// setting values for necessary variables
+
 function getNewNum() {
     let newNum =  Math.floor(Math.random() * 10);
     return newNum;
 }
-
 function getNewCountryCode() {
     let newCountryCode = countryCodes[currentNum];
     return newCountryCode;
 }
-
 function getNewCountryName() {
     let newCountryName = countryNames[currentNum];
     return newCountryName;
 }
-
-// initializations
-let currentNum = 0
-currentNum = getNewNum();
-currentCountryName = getNewCountryName();
-// for testing:
-console.log(currentNum);
-console.log(currentCountryName);
-console.log(getNewCountryCode());
-
-// checking whether answer is correct or not
-
-// let correctAnswerNumber = Math.floor(Math.random() * 4);
-
 function generateRandomIntegerInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let correctAnswerNumber = generateRandomIntegerInRange(1, 4);
-console.log(correctAnswerNumber);
+// initializations
+
+let currentNum = getNewNum();
+let currentCountryName = getNewCountryName();
+let correctAnswerNumber;
+
+// for testing:
+
+console.log(currentNum);
+console.log(typeof(currentNum));
+console.log(currentCountryName);
+console.log(getNewCountryCode());
 
 // change text of correct option
 
 function changeCorrectOptionText(correctAnswerNumber) {
-    // let correctOption = document.getElementById(correctAnswerNumber);
-    // correctOption.innerHTML = currentCountryName;
-    document.getElementById(correctAnswerNumber).innerHTML = currentCountryName;
+    document.getElementById(String(correctAnswerNumber)).innerHTML = getNewCountryName();
 }
 
-changeCorrectOptionText(correctAnswerNumber);
+// checking whether answer is correct or not
 
-// TODO - add if statement to check whether answer is correct or not
+function checkAnswer(buttonID) {
+    console.log(buttonID);
+    console.log(typeof(buttonID));
+    if (Number(buttonID) === correctAnswerNumber) {
+        correct();
+    } else {
+        incorrect();
+    }
+}
 
 // program starts, question is asked
 
 function question() {
+
+    correctAnswerNumber = generateRandomIntegerInRange(1, 4);
+    changeCorrectOptionText(correctAnswerNumber);
 
     // change heading
     document.getElementById('headingText').innerHTML = "WHAT'S THE COUNTRY?";
@@ -63,8 +68,8 @@ function question() {
 
     // display flag
     document.querySelector('.flag').style.display = 'flex';
-    let comp1 = 'https://flagcdn.com/';
-    let flagURL = comp1.concat(getNewCountryCode(),'.svg');
+    let URLcomp1 = 'https://flagcdn.com/';
+    let flagURL = URLcomp1.concat(getNewCountryCode(),'.svg');
     console.log(flagURL);
     // document.querySelector('.flag').style.backgroundImage = 'url("https://flagcdn.com/ru.svg")';
     document.querySelector('.flag').style.cssText+= `background-image: url(${flagURL})`;
