@@ -7,7 +7,7 @@ const countryNames = ['Sri Lanka', 'United States', 'Romania', 'France', 'Spain'
 // setting values for necessary variables
 
 function getNewNum() {
-    let newNum =  Math.floor(Math.random() * 10);
+    let newNum =  Math.floor(Math.random() * countryCodes.length);
     return newNum;
 }
 function getCountryCode() {
@@ -22,7 +22,7 @@ function generateRandomIntegerInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// initializations
+// initializations (global variables)
 
 let currentNum = getNewNum();
 let currentCountryName = getCountryName();
@@ -41,6 +41,40 @@ function changeCorrectOptionText(correctAnswerNumber) {
     document.getElementById(String(correctAnswerNumber)).innerHTML = getCountryName();
 }
 
+// getting text of other option
+
+function getOtherOptionText() {
+    let otherOptionText;
+    do {
+        otherOptionText = countryNames[Math.floor(Math.random() * countryNames.length)];
+    } while (otherOptionText === currentCountryName);
+    return otherOptionText;
+}
+
+// changing text of other options
+
+function changeTextOfOtherOptions() {
+    for (let i = 1; i <= 4; i++) {
+        if (i !== correctAnswerNumber) {
+            document.getElementById(String(i)).innerHTML = getOtherOptionText();
+        }
+    }
+}
+
+function test() {
+    let option1Text = document.getElementById('1').innerHTML;
+    let option2Text = document.getElementById('2').innerHTML;
+    let option3Text = document.getElementById('3').innerHTML;
+    let option4Text = document.getElementById('4').innerHTML;
+    for (let i = 1; i <= 4; i++) {
+        do {
+            if (i !== correctAnswerNumber) {
+                document.getElementById(String(i)).innerHTML = getOtherOptionText();
+            }
+        } while (document.getElementById(String(i)).innerHTML === option1Text || document.getElementById(String(i)).innerHTML === option2Text || document.getElementById(String(i)).innerHTML === option3Text || document.getElementById(String(i)).innerHTML === option4Text);
+    }
+}
+
 // checking whether answer is correct or not
 
 function checkAnswer(buttonID) {
@@ -57,8 +91,14 @@ function checkAnswer(buttonID) {
 
 function question() {
 
+    // get new correct answer number
     correctAnswerNumber = generateRandomIntegerInRange(1, 4);
+
+    // change button text of correct answer to correct country name
     changeCorrectOptionText(correctAnswerNumber);
+
+    // change button text of other answers to random country names
+    changeTextOfOtherOptions();
 
     // change heading
     document.getElementById('headingText').innerHTML = "WHAT'S THE COUNTRY?";
