@@ -1,3 +1,30 @@
+// declaring arrays
+
+const num = [0,1,2,3,4,5,6,7,8,9];
+const countryCodes = ['lk', 'us', 'ro', 'fr', 'es', 'in', 'ml', 'sg', 'za', 'jp'];
+const countryNames = ['Sri Lanka', 'United States', 'Romania', 'France', 'Spain', 'India', 'Mali', 'Singapore', 'South Africa', 'Japan'];
+
+function getNewNum() {
+    let newNum =  Math.floor(Math.random() * 10);
+    return newNum;
+}
+
+function getNewCountryCode() {
+    let newCountryCode = countryCodes[currentNum];
+    return newCountryCode;
+}
+
+function getNewCountryName() {
+    let newCountryName = countryNames[currentNum];
+    return newCountryName;
+}
+
+let currentNum = 0
+currentNum = getNewNum();
+// for testing:
+console.log(currentNum);
+console.log(getNewCountryCode());
+
 // program starts, question is asked
 
 function question() {
@@ -10,7 +37,12 @@ function question() {
 
     // display flag
     document.querySelector('.flag').style.display = 'flex';
-    document.querySelector('.flag').style.backgroundImage = 'url("https://flagcdn.com/za.svg")';
+    let comp1 = 'https://flagcdn.com/';
+    let flagURL = comp1.concat(getNewCountryCode(),'.svg');
+    console.log(flagURL);
+    // document.querySelector('.flag').style.backgroundImage = 'url("https://flagcdn.com/ru.svg")';
+    document.querySelector('.flag').style.cssText+= `background-image: url(${flagURL})`;
+    // document.querySelector('.flag').style.backgroundImage = 'url(' + flagURL + ')';
     document.querySelector('.flag').style.backgroundSize = 'contain';
     document.querySelector('.flag').style.backgroundRepeat = 'no-repeat';
     document.querySelector('.flag').style.backgroundPositionX = 'center';
