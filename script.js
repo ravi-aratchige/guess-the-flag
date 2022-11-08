@@ -93,6 +93,12 @@ function question() {
     // change button text of other answers to random country names
     changeTextOfOtherOptions();
 
+    // remove globe
+    // document.querySelector('.background').style.display = 'none';
+    document.querySelector('.background').style.visibility = 'hidden';
+    document.querySelector('.background').style.opacity = '0';
+    document.querySelector('.background').style.transition = 'visibility 0s 0.3s, opacity 0.3s linear';
+
     // change heading
     document.getElementById('headingText').innerHTML = "WHAT'S THE COUNTRY?";
 
@@ -114,9 +120,6 @@ function question() {
 
     // display option buttons
     document.querySelector('.options').style.display = 'block';
-
-    // remove globe
-    document.querySelector('.background').style.display = 'none';
 
     // remove start button
     document.querySelector('.start').style.display = 'none';
