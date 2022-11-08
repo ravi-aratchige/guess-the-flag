@@ -1,7 +1,7 @@
-# guess-the-flag
+# Guess The Flag (Under Construction!)
 UNDER CONSTRUCTION!
 <br>
-This is a "Guess the Flag" game written purely in HTML, CSS and Vanilla JavaScript.
+As suggested by the title, this is a "Guess the Flag" game written purely in HTML, CSS and Vanilla JavaScript.
 <h2>Preview</h2>
 <img src="img/screenshot1-2.png" alt="Preview Image 1 and 2">
 <br>
