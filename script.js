@@ -22,19 +22,19 @@ function generateRandomIntegerInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// initializations (global variables)
+// declaring global variables
 
 let currentNum = getNewNum();
 let currentCountryName = getCountryName();
 let correctAnswerNumber;
 
-// change text of correct option
+// change text of the correct option to the correct country's name
 
 function changeCorrectOptionText(correctAnswerNumber) {
     document.getElementById(String(correctAnswerNumber)).innerHTML = getCountryName();
 }
 
-// getting text of other option
+// getting text of an option that is not the correct option
 
 function getOtherOptionText() {
     let otherOptionText;
@@ -44,7 +44,7 @@ function getOtherOptionText() {
     return otherOptionText;
 }
 
-// changing text of other options
+// changing text of other options that are not the correct options to random country names
 
 function changeTextOfOtherOptions() {
     for (let i = 1; i <= 4; i++) {
@@ -66,7 +66,7 @@ function test() {
             if (i !== correctAnswerNumber) {
                 document.getElementById(String(i)).innerHTML = getOtherOptionText();
             }
-        } while (document.getElementById(String(i)).innerHTML === option1Text || document.getElementById(String(i)).innerHTML === option2Text || document.getElementById(String(i)).innerHTML === option3Text || document.getElementById(String(i)).innerHTML === option4Text);
+        } while (document.getElementById(String(i)).innerHTML == option1Text || document.getElementById(String(i)).innerHTML == option2Text || document.getElementById(String(i)).innerHTML == option3Text || document.getElementById(String(i)).innerHTML == option4Text);
     }
 }
 
