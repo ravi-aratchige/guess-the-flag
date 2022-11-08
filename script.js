@@ -103,11 +103,14 @@ function question() {
     document.querySelector('.background').style.opacity = '0';
     document.querySelector('.background').style.transition = 'visibility 0s 0.3s, opacity 0.3s linear';
 
+    // remove description
+    document.querySelector('.description').style.display = 'none';
+
+    // remove start button
+    document.querySelector('.start').style.display = 'none';
+
     // change heading
     document.getElementById('headingText').innerHTML = "WHAT'S THE COUNTRY?";
-
-    // remove description
-    document.getElementById('description').style.display = 'none';
 
     // display flag
     // 1. set flag div
@@ -124,9 +127,6 @@ function question() {
 
     // display option buttons
     document.querySelector('.options').style.display = 'block';
-
-    // remove start button
-    document.querySelector('.start').style.display = 'none';
 }
 
 // correct answer is received
@@ -139,8 +139,8 @@ function correct() {
     // leave flag as it is
 
     // display country name and description
-    document.querySelector('.countryDescription').style.display = 'block';
     document.getElementById('countryName').innerHTML = currentCountryName;
+    document.querySelector('.countryDescription').style.display = 'block';
 
     // remove option buttons
     document.querySelector('.options').style.display = 'none';
@@ -159,8 +159,8 @@ function incorrect() {
     // leave flag as it is
 
     // display country name and description
-    document.querySelector('.countryDescription').style.display = 'block';
     document.getElementById('countryName').innerHTML = currentCountryName;
+    document.querySelector('.countryDescription').style.display = 'block';
 
     // remove option buttons
     document.querySelector('.options').style.display = 'none';
