@@ -3,9 +3,9 @@ UNDER CONSTRUCTION!
 <br>
 This is a "Guess the Flag" game written purely in HTML, CSS and Vanilla JavaScript.
 <h2>Preview</h2>
-<img src="img/screenshot1-2.png" alt="Preview 1 and 2">
+<img src="img/screenshot1-2.png" alt="Preview Image 1 and 2">
 <br>
-<img src="img/screenshot3-4.png" alt="Preview 3 and 4">
+<img src="img/screenshot3-4.png" alt="Preview Image 3 and 4">
 <h2>Issues</h2>
 - Not desktop responsive
 <br>
