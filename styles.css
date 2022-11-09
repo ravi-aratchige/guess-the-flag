@@ -140,7 +140,6 @@ button {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    z-index: -1;
 }
 #globe-medium {
     display: none;
