@@ -12,3 +12,5 @@ As suggested by the title, this is a "Guess the Flag" game written purely in HTM
 - JavaScript code is not optimized
 <br>
 - 360 x 800 mobile dimensions cause website to have horizontal scroll... unable to determine reason
+<br>
+- Need to add "About" section
