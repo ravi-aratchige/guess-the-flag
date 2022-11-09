@@ -99,12 +99,12 @@ function question() {
 
     // remove globe
     // document.querySelector('.background').style.display = 'none';
-    document.querySelector('.background').style.visibility = 'hidden';
-    document.querySelector('.background').style.opacity = '0';
-    document.querySelector('.background').style.transition = 'visibility 0s 0.3s, opacity 0.3s linear';
+    document.querySelector('.globe').style.visibility = 'hidden';
+    document.querySelector('.globe').style.opacity = '0';
+    document.querySelector('.globe').style.transition = 'visibility 0s 0.3s, opacity 0.3s linear';
 
     // remove description
-    document.querySelector('.description').style.display = 'none';
+    document.querySelector('.introduction').style.display = 'none';
 
     // remove start button
     document.querySelector('.start').style.display = 'none';
@@ -140,7 +140,7 @@ function correct() {
 
     // display country name and description
     document.getElementById('countryName').innerHTML = currentCountryName;
-    document.querySelector('.countryDescription').style.display = 'block';
+    document.querySelector('.countryInformation').style.display = 'block';
 
     // remove option buttons
     document.querySelector('.options').style.display = 'none';
@@ -160,7 +160,7 @@ function incorrect() {
 
     // display country name and description
     document.getElementById('countryName').innerHTML = currentCountryName;
-    document.querySelector('.countryDescription').style.display = 'block';
+    document.querySelector('.countryInformation').style.display = 'block';
 
     // remove option buttons
     document.querySelector('.options').style.display = 'none';
@@ -178,7 +178,7 @@ function showAnswer() {
     // leave flag as it is
 
     // display country name and description
-    document.querySelector('.countryDescription').style.display = 'block';
+    document.querySelector('.countryInformation').style.display = 'block';
     document.getElementById('countryName').innerHTML = currentCountryName;
 
     // remove option buttons
@@ -197,7 +197,7 @@ function next() {
     currentCountryName = getCountryName();
 
     // remove country description
-    document.querySelector('.countryDescription').style.display = 'none';
+    document.querySelector('.countryInformation').style.display = 'none';
 
     // remove next flag button
     document.querySelector('.next').style.display = 'none';
