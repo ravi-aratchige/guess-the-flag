@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="header">
-        <!-- <a href="index.html" id="websiteLogo"><img src="img/logo.png" alt="Logo"></a> -->
+        <!-- This section includes the website logo, the "About" section and the "Contact" section -->
         <a href="index.html" id="websiteLogo"><i class="fa-solid fa-globe"></i></a>
         <ul>
             <li><a href="#">About</a></li>
@@ -19,22 +19,23 @@
         </ul>
     </div>
     <div class="heading">
+        <!-- This section holds the text of the main heading -->
         <h1 id="headingText">GUESS THE FLAG</h1>
     </div>
+    <div class="getStarted">
+        <!-- This section holds an introduction to the site and the "Start" button -->
+        <div class="introduction">
+            <p id="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat reprehenderit repellat totam illo quia cupiditate necessitatibus! Ea omnis beatae cupiditate maxime cum vitae commodi voluptate. Exercitationem iure delectus excepturi?</p>
+        </div>
+        <div class="start">
+            <button onclick="question()">Start! &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
     <div class="flag">
-        <!-- <img src="https://flagcdn.com/at.svg" alt="Flags"> -->
-    </div>
-    <div class="countryDescription">
-        <p>This is <span id="countryName">Country Name</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat saepe earum voluptatibus possimus error consequuntur nihil quia harum. Perspiciatis nesciunt odit, quos sapiente voluptatibus ullam quae expedita nulla velit?</p>
-    </div>
-    <div class="description">
-        <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat reprehenderit repellat totam illo quia cupiditate necessitatibus! Ea omnis beatae cupiditate maxime cum vitae commodi voluptate. Exercitationem iure delectus excepturi?</p>
-    </div>
-    <div class="start">
-        <button onclick="question()">Start! &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+        <!-- This section is where the flag will spawn when called from the Flagpedia CDN -->
     </div>
     <div class="options">
+        <!-- This section includes the 4 answer options, the "Show Answer" button and the "Skip Flag" button -->
         <div class="answers">
             <button id="1" onclick="checkAnswer(this.id)">Answer 1</button>
             <button id="2" onclick="checkAnswer(this.id)">Answer 2</button>
@@ -42,17 +43,24 @@
             <button id="4" onclick="checkAnswer(this.id)">Answer 4</button>
         </div>
         <div class="otherOptions">
-            <button id="showAnswer" onclick="showAnswer()">Show Answer</button>
-            <button id="skip" onclick="next()">Skip Flag</button>
+            <button id="showAnswer" onclick="showAnswer()">Show Answer &nbsp; <i class="fa-solid fa-eye"></i></button>
+            <button id="skip" onclick="next()">Skip Flag &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
-    <div class="next">
-        <button id="nextFlag" onclick="next()">Next Flag</button>
+    <div class="countryInformation">
+        <!-- This section includes information about the country whose flag is currently displayed -->
+        <p>This is <span id="countryName">Country Name</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat saepe earum voluptatibus possimus error consequuntur nihil quia harum. Perspiciatis nesciunt odit, quos sapiente voluptatibus ullam quae expedita nulla velit?</p>
     </div>
-    <div class="background">
+    <div class="next">
+        <button id="nextFlag" onclick="next()">Next Flag &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="globe">
+        <!-- This section holds the globe that is rendered at the bottom of the page when the site is loaded for the first time or refreshed -->
         <img src="img/globe-small.png" alt="Flags" id="globe-small">
         <img src="img/globe-medium.png" alt="Flags" id="globe-medium">
     </div>
+    <!-- JavaScript hook -->
     <script src="script.js"></script>
 </body>
 </html>
