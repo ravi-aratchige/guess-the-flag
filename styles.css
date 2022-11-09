@@ -55,7 +55,6 @@ button {
     /* text-align is not really necessary */
     height: 192px;
     width: 100vw;
-    /* background-color: aqua; */
     display: none;
 }
 .flag img {
